@@ -25,11 +25,9 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/week18Populater");
 
-
-
 app.get("/scrape", function(req, res) {
 
-  axios.get("http://www.echojs.com/").then(function(response) {
+  axios.get("https://www.rollingstone.com/").then(function(response) {
 
 var $ = cheerio.load(response.data);
 
